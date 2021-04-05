@@ -1,0 +1,31 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+      <record id="method_contract_total.contract_contract_form_view" model="ir.ui.view">
+          <field name="name">method.contract.total.contract.contract.form.view</field>
+          <field name="model">contract.contract</field>
+          <field name="inherit_id" ref="contract.contract_contract_form_view"/>
+          <field name="arch" type="xml">
+
+              <notebook position="after">
+                <div class="row pull-right">
+                  <strong>Total : </strong><field name="contract_total" widget='monetary' options="{'currency_field': 'currency_id'}" />
+                </div>
+              </notebook>
+
+          </field>
+      </record> 
+
+      <record id="method_contract_total.contract_contract_tree_view" model="ir.ui.view">
+        <field name="name">method_contract.total.contract.contract.tree.view</field>
+        <field name="model">contract.contract</field>
+        <field name="inherit_id" ref="contract.contract_contract_tree_view"/>
+        <field name="arch" type="xml">
+          <field name="partner_id" position="after">
+            <field name="contract_total" widget='monetary' options="{'currency_field': 'currency_id'}" sum="Total"/>
+          </field>
+        </field>
+      </record>
+
+  </data>
+</odoo>
