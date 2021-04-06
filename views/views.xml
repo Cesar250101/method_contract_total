@@ -18,6 +18,18 @@
           </field>
       </record> 
 
+    <record id="method_contract_total.contract_contract_search_view" model="ir.ui.view">                                
+      <field name="name">method.contract.total.contract.contract.search.view</field>                                
+      <field name="model">contract.contract</field>   
+      <field name="inherit_id" ref="contract.contract_contract_search_view"/>                             
+      <field name="arch" type="xml">                                    
+        <xpath expr="//group" position="inside">
+          <filter string="Tipo de Pago" name="pago_anual" context="{'group_by': 'pago_anual'}"></filter>                                            
+        </xpath>
+            
+      </field>                            
+    </record>
+
       <record id="method_contract_total.contract_contract_tree_view" model="ir.ui.view">
         <field name="name">method_contract.total.contract.contract.tree.view</field>
         <field name="model">contract.contract</field>
