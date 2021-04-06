@@ -12,7 +12,9 @@
                   <strong>Total : </strong><field name="contract_total" widget='monetary' options="{'currency_field': 'currency_id'}" />
                 </div>
               </notebook>
-
+              <xpath expr="//field[@name='contract_template_id']" position="after">
+                <field name="pago_anual" />
+              </xpath>
           </field>
       </record> 
 

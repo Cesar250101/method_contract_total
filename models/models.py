@@ -6,6 +6,7 @@ class Contrato(models.Model):
     _inherit = 'contract.contract'
     _description = 'model.technical.name'
     
+    pago_anual = fields.Boolean(string='Pago Anual')
     contract_total = fields.Float(string='Total del Contrato')
     
     @api.onchange('contract_line_ids','contract_line_ids.quantity','contract_line_ids.price_unit')
