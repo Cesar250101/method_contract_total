@@ -24,7 +24,7 @@
       <field name="inherit_id" ref="contract.contract_contract_search_view"/>                             
       <field name="arch" type="xml">                                    
         <xpath expr="//group" position="inside">
-          <filter string="Tipo de Pago" name="pago_anual" context="{'group_by': 'pago_anual'}"></filter>                                            
+          <filter string="Pago Anual" name="pago_anual" context="{'group_by': 'pago_anual'}"></filter>                                            
         </xpath>
             
       </field>                            
