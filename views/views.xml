@@ -15,6 +15,10 @@
               <xpath expr="//field[@name='contract_template_id']" position="after">
                 <field name="pago_anual" />
               </xpath>
+              <xpath expr="//field[@name='date_end']" position="before">
+                <field name="fecha_inicio" />
+              </xpath>
+
           </field>
       </record> 
 
