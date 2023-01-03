@@ -9,7 +9,9 @@ class Contrato(models.Model):
     pago_anual = fields.Boolean(string='Pago Anual')
     fecha_inicio = fields.Date(string='Fecha Inicio Contrato')
     contract_total = fields.Float(string='Total del Contrato')
-    
+    representante_legal = fields.Char('Representante Legal')
+    rut_representante = fields.Char('Rut Representante')
+
     @api.onchange('contract_line_ids','contract_line_ids.quantity','contract_line_ids.price_unit')
     def _onchange_contract_total(self):
         total=0
